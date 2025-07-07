@@ -87,7 +87,3 @@ Digite o segundo parâmetro:
 10
 O segundo parâmetro deve ser maior que o primeiro
 ```
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
