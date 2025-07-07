@@ -1,54 +1,60 @@
-# Desafio de Controle de Fluxo em Java
+# Desafio Contador em Java
 
-## 📜 Descrição
+## 📝 Descrição
 
-Este projeto é um simples programa de console em Java desenvolvido para demonstrar conceitos fundamentais de controle de fluxo. O programa solicita ao usuário dois números inteiros, valida se o segundo número é maior que o primeiro e, em caso afirmativo, imprime no console uma contagem baseada na diferença entre eles. O principal objetivo é praticar o uso de laços de repetição (`for`), condicionais (`if`) e o tratamento de exceções customizadas.
+Este projeto é um simples programa de console em Java que solicita ao usuário dois números inteiros. O programa então realiza uma contagem incremental com base na diferença entre os dois números, imprimindo cada passo da iteração no console. O principal objetivo é demonstrar o uso de controle de fluxo e o tratamento de exceções personalizadas em Java.
 
-## ✨ Funcionalidades Principais
+Uma exceção customizada, `ParametrosInvalidosException`, é lançada se o segundo parâmetro for menor que o primeiro, garantindo que a lógica de contagem seja sempre válida.
 
-* **Entrada de Dados:** Recebe dois parâmetros numéricos inteiros via terminal.
-* **Validação de Parâmetros:** Verifica se o segundo parâmetro é estritamente maior que o primeiro.
-* **Tratamento de Exceção:** Lança uma exceção customizada (`ParametrosInvalidosException`) caso a validação falhe.
-* **Lógica de Contagem:** Itera e imprime uma sequência de números com base na diferença entre os parâmetros fornecidos.
+## ⚙️ Principais Funcionalidades
 
-## 🚀 Tecnologias Utilizadas
+-   Recebe dois parâmetros numéricos via terminal.
+-   Valida se o segundo parâmetro é maior que o primeiro.
+-   Lança uma exceção personalizada (`ParametrosInvalidosException`) caso a validação falhe.
+-   Realiza um loop para imprimir os números com base na diferença entre os dois parâmetros.
 
-* **Java:** Linguagem principal do projeto.
-* **IDE:** Desenvolvido utilizando IntelliJ IDEA.
+## 💻 Tecnologias e Linguagens Utilizadas
 
-## 📂 Estrutura do Projeto
+-   **Linguagem:** Java
+-   **Ambiente de Desenvolvimento:** IntelliJ IDEA
+
+## 📁 Estrutura de Pastas e Arquivos
 
 O projeto está organizado da seguinte forma:
 
 ```
-
 /
 ├── .gitignore
-├── desafio.iml
-├── src/
-│   ├── Contador.java                   \# Classe principal com a lógica do programa
-│   └── ParametrosInvalidosException.java   \# Classe de exceção customizada
-└── ...
+├── .idea/
+│ ├── .gitignore
+│ ├── misc.xml
+│ ├── modules.xml
+│ └── vcs.xml
+└── src/
+├── Contador.java
+└── ParametrosInvalidosException.java
+```
 
-````
+-   **`src/Contador.java`**: Arquivo principal que contém a lógica para solicitar os dados ao usuário, chamar o método de contagem e tratar a exceção.
+-   **`src/ParametrosInvalidosException.java`**: Classe de exceção personalizada que herda de `RuntimeException`.
+-   **`.idea/`**: Pasta de configuração do ambiente de desenvolvimento IntelliJ IDEA.
+-   **`.gitignore`**: Arquivo que especifica os arquivos e pastas a serem ignorados pelo Git.
 
-## ⚙️ Instruções de Execução
-
-Para executar o projeto localmente, siga os passos abaixo.
+## ▶️ Passo a Passo de Execução
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/desafio-controle-fluxo-java.git](https://github.com/seu-usuario/desafio-controle-fluxo-java.git)
+    git clone [https://github.com/seu-usuario/desafio-contador-java.git](https://github.com/seu-usuario/desafio-contador-java.git)
     ```
 
-2.  **Navegue até o diretório do código-fonte:**
+2.  **Navegue até o diretório do projeto:**
     ```bash
-    cd desafio-controle-fluxo-java/src
+    cd desafio-contador-java/src
     ```
 
 3.  **Compile os arquivos Java:**
     ```bash
-    javac Contador.java ParametrosInvalidosException.java
+    javac ParametrosInvalidosException.java Contador.java
     ```
 
 4.  **Execute a classe principal:**
@@ -56,38 +62,32 @@ Para executar o projeto localmente, siga os passos abaixo.
     java Contador
     ```
 
-5.  O terminal solicitará que você insira os dois parâmetros para iniciar a contagem.
+## 💡 Exemplo de Uso
 
-##  Exemplo de Uso
+Ao executar o programa, você verá a seguinte saída:
 
-### Execução com sucesso
-
-Ao inserir um segundo parâmetro maior que o primeiro:
-
-````
-
+**Caso de Sucesso:**
+```
 Digite o primeiro parâmetro:
 5
 Digite o segundo parâmetro:
-8
+10
 Imprimindo o número: 1
 Imprimindo o número: 2
 Imprimindo o número: 3
-
+Imprimindo o número: 4
+Imprimindo o número: 5
 ```
 
-### Execução com erro
-
-Ao inserir o segundo parâmetro menor ou igual ao primeiro, a exceção é tratada:
-
+**Caso de Falha (Exceção):**
 ```
-
 Digite o primeiro parâmetro:
-10
+15
 Digite o segundo parâmetro:
-3
+10
 O segundo parâmetro deve ser maior que o primeiro
-
 ```
 
-```
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
